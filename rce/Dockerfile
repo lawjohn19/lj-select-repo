@@ -1,0 +1,4 @@
+FROM httpd:2.4.62
+
+EXPOSE 443
+

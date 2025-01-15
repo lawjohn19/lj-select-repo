@@ -1,0 +1,16 @@
+version: "3"
+services:
+  website:
+      image: nginx
+      ports:
+        - "8087:80"
+      restart: always
+      networks:
+           newnet1:
+             ipv4_address: 192.168.56.25
+networks:
+   newnet1:
+     ipam:
+      driver: default
+      config:
+        - subnet: "192.168.56.0/24"                  
